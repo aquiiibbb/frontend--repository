@@ -1,0 +1,209 @@
+/* REPORTS HUB STYLES (White & Light Grey System) */
+
+.rh-container {
+  padding: 24px;
+  background: #ffffff;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rh-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.rh-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.rh-header p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.rh-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.rh-btn-action {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.rh-btn-action:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.rh-report-select {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  outline: none;
+}
+
+.rh-report-select:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.rh-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.rh-preset-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rh-preset-btn.active {
+  background: #e2e8f0;
+  color: #0f172a;
+  border: 1px solid #94a3b8;
+  font-weight: 800;
+}
+
+.rh-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.rh-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rh-tab.active {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1.5px solid #0f172a;
+  font-weight: 800;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.rh-workspace {
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   EXECUTIVE NIGHT VIEW OVERRIDES FOR REPORTS HUB
+   ========================================================================== */
+[data-theme="dark"] .rh-container {
+  background: #0b0f19 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .rh-header h2 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .rh-header p {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .rh-btn-action {
+  background: #161b26 !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .rh-btn-action:hover {
+  background: #1e2638 !important;
+  border-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .rh-report-select {
+  background: #161b26 !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .rh-report-select option {
+  background: #161b26 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .rh-toolbar {
+  background: #161b26 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .rh-preset-btn {
+  background: #0e131f !important;
+  color: #94a3b8 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .rh-preset-btn.active {
+  background: #1e2638 !important;
+  color: #38bdf8 !important;
+  border-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .rh-tab {
+  background: #161b26 !important;
+  color: #94a3b8 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .rh-tab.active {
+  background: #1e2638 !important;
+  color: #38bdf8 !important;
+  border-color: #38bdf8 !important;
+}

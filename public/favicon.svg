@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 650" width="600" height="650" style="background:#ffffff; font-family:'Outfit', 'Inter', sans-serif;">
+  <defs>
+    <!-- Warm Cream Gradient #faf1de -->
+    <linearGradient id="creamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffef7" />
+      <stop offset="40%" stop-color="#faf1de" />
+      <stop offset="100%" stop-color="#f0d8a5" />
+    </linearGradient>
+
+    <!-- Medium Slate Grey Body Gradient #475569 -->
+    <linearGradient id="slateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+
+    <!-- AI Tech Spark Golden Accent -->
+    <linearGradient id="aiSparkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10" />
+    </filter>
+  </defs>
+
+  <g transform="translate(300, 240)" filter="url(#softGlow)">
+    
+    <!-- 1. LEFT STEM: HOTEL KEY SHAFT WITH TEETH -->
+    <g transform="translate(-85, -20)">
+      <!-- Key Vertical Shaft -->
+      <path d="M -14,-120 L 14,-120 L 14,40 L -14,40 Z" fill="url(#slateGrad)" />
+      <!-- Key Teeth on Left Side -->
+      <rect x="-34" y="-80" width="20" height="16" fill="url(#slateGrad)" />
+      <rect x="-34" y="-48" width="20" height="16" fill="url(#slateGrad)" />
+    </g>
+
+    <!-- 2. RIGHT STEM: UPWARD FORWARD MOTION ARROW ("LET'S GO!") -->
+    <g transform="translate(85, -20)">
+      <!-- Vertical Shaft -->
+      <path d="M -14,-25 L 14,-25 L 14,90 C 14,106 -14,106 -14,90 Z" fill="url(#slateGrad)" />
+      <!-- Dynamic Upward Arrow Head -->
+      <path d="M 0,-130 L 52,-60 L -52,-60 Z" fill="url(#slateGrad)" />
+      <!-- Inner Motion Highlight Triangle -->
+      <path d="M 0,-106 L 28,-58 L -28,-58 Z" fill="url(#creamGrad)" opacity="0.95" />
+    </g>
+
+    <!-- 3. CENTER CROSSBAR + AI STAR SPARKLE -->
+    <rect x="-85" y="-36" width="170" height="28" rx="14" fill="url(#slateGrad)" />
+    
+    <!-- Razor-Sharp AI 4-Pointed Sparkle -->
+    <path d="M 0,-62 Q 0,-22 40,-22 Q 0,-22 0,18 Q 0,-22 -40,-22 Q 0,-22 0,-62 Z" fill="url(#aiSparkGrad)" />
+    <circle cx="0" cy="-22" r="7" fill="#ffffff" />
+
+    <!-- 4. BOTTOM-LEFT CIRCULAR KEY HEAD BADGE (THE LOGICAL KEY HEAD + BED) -->
+    <g transform="translate(-85, 75)">
+      <!-- Outer Circle Badge (Head of the Key) -->
+      <circle cx="0" cy="0" r="54" fill="url(#creamGrad)" stroke="#334155" stroke-width="8" />
+      
+      <!-- Bed Silhouette Icon inside Key Head -->
+      <g transform="translate(0, -6)">
+        <path d="M -24,-6 L -24,18 M -24,8 L 24,8 M 24,-6 L 24,18" stroke="#334155" stroke-width="4.5" stroke-linecap="round" fill="none" />
+        <!-- Pillow -->
+        <rect x="-19" y="0" width="14" height="8" rx="3.5" fill="#334155" />
+        <!-- Blanket Line -->
+        <line x1="-2" y1="8" x2="24" y2="8" stroke="#334155" stroke-width="5.5" stroke-linecap="round" />
+      </g>
+
+      <!-- Keyhole Slot under Bed -->
+      <g transform="translate(0, 22)">
+        <circle cx="0" cy="-4" r="5" fill="#334155" />
+        <path d="M -3.5,-2 L 3.5,-2 L 5,10 L -5,10 Z" fill="#334155" />
+      </g>
+    </g>
+
+  </g>
+
+  <!-- BRAND TYPOGRAPHY -->
+  <g text-anchor="middle">
+    <text x="300" y="525" font-size="64" font-weight="900" fill="#334155" letter-spacing="4">Hālo</text>
+    <text x="300" y="570" font-size="20" font-weight="700" fill="#64748b" letter-spacing="0.5">Let's Go Smart with AI Hotel PMS</text>
+  </g>
+</svg>

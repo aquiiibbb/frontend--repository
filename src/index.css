@@ -1,0 +1,11 @@
+/* Global entry point.
+   Feature/page-specific styles now live next to their components:
+   - components/Layout.css   (sidebar, topbar, page shell, setup lock modal)
+   - components/UI.css       (buttons, cards, tables, badges, forms, tabs)
+   - pages/Gallery.css
+   - pages/Rooms.css
+   - pages/frontdesk/Calendar.css
+   - pages/frontdesk/wailking.css
+   Only truly global things (variables, reset, responsive tweaks) stay here. */
+@import "./styles/base.css";
+@import "./styles/responsive.css";

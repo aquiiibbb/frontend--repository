@@ -1,0 +1,178 @@
+.qam-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1300;
+  padding: 16px;
+}
+
+.qam-card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border-top: 3px solid var(--gold-500);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.qam-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 10px;
+}
+.qam-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  color: var(--navy-900);
+}
+.qam-close {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--text-400);
+}
+.qam-close:hover { color: var(--danger); }
+
+.qam-body { padding: 0 16px 6px; display: flex; flex-direction: column; gap: 12px; }
+
+.qam-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Cell Choice Modal (Book vs Block) */
+.cell-choice-card {
+  max-width: 460px !important;
+}
+
+.cell-choice-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px 24px;
+}
+
+.choice-tile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.choice-tile:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.create-booking-tile:hover {
+  border-color: #10b981;
+}
+
+.block-room-tile:hover {
+  border-color: #ef4444;
+}
+
+.choice-icon {
+  font-size: 26px;
+  width: 36px;
+  text-align: center;
+}
+
+.choice-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.choice-info strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.choice-info span {
+  font-size: 11.5px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.choice-arrow {
+  font-size: 22px;
+  font-weight: 800;
+  color: #94a3b8;
+}
+
+.qam-infoline {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-600);
+  background: var(--bg, #f2f4f7);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.qam-confirm-text {
+  margin: 4px 0 8px;
+  font-size: 13.5px;
+  color: var(--text-900);
+  line-height: 1.5;
+}
+.qam-danger-text { color: var(--danger); font-weight: 600; }
+
+.qam-field { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; }
+.qam-label { color: var(--text-600); font-weight: 600; }
+.qam-field input[type="text"],
+.qam-field input[type="email"],
+.qam-field input[type="number"],
+.qam-field input[type="time"],
+.qam-field select,
+.qam-field textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--text-900);
+  background: var(--surface);
+  font-family: inherit;
+}
+
+.qam-field input[type="date"] {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 10px !important;
+  padding: 7px 12px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  background: #ffffff !important;
+  color-scheme: light !important;
+  transition: all 0.2s ease !important;
+}
+
+.qam-field input[type="date"]:hover {
+  border-color: #3b82f6 !important;
+  background: #f8fafc !important;
+}
+.qam-field textarea { resize: vertical; }
+.qam-field input[type="checkbox"] { width: 16px; height: 16px; align-self: flex-start; }
+
+.qam-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 16px 16px;
+}

@@ -1,0 +1,392 @@
+/* Misc Operations Page Styles (100% Rule-Compliant Theme) */
+
+/* Rule 1: Background page color is #ffffff */
+.misc-page {
+  padding: 24px 32px;
+  background: #ffffff;
+  min-height: calc(100vh - 64px);
+  color: #000000;
+  font-family: inherit;
+}
+
+.misc-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.misc-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+}
+
+.misc-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Rule 2: Box Highlights & Triggers in Grey */
+.misc-simple-date-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 7px 12px;
+}
+
+.misc-cal-icon {
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.misc-simple-date-input {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.misc-toast-badge {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #000000;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Rule 2 & 3: Buttons & Triggers */
+.misc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.misc-btn-dark {
+  background: #000000;
+  color: #ffffff;
+}
+
+.misc-btn-dark:hover {
+  background: #1e293b;
+}
+
+.misc-btn-outline {
+  background: #ffffff;
+  color: #000000;
+  border-color: #cbd5e1;
+}
+
+.misc-btn-outline:hover {
+  background: #f1f5f9;
+}
+
+/* Filter Row (Slim) */
+.misc-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.misc-right-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.misc-search-box {
+  position: relative;
+  width: 260px;
+}
+
+.misc-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.misc-search-input {
+  width: 100%;
+  height: 36px;
+  padding: 0 12px 0 36px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+}
+
+.misc-type-pills {
+  display: flex;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.misc-pill {
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.misc-pill.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Journal Table Card (Rule 2: Box Highlight Grey, Rule 3: Figures in Black) */
+.misc-table-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.misc-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.misc-table th {
+  background: #f8fafc;
+  padding: 12px 16px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #475569;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid #e2e8f0;
+}
+
+.misc-table td {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  color: #000000;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.misc-ref-code {
+  font-family: monospace;
+  font-weight: 800;
+  color: #000000;
+}
+
+.misc-time-text {
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.misc-type-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 800;
+  background: #f1f5f9;
+  color: #000000;
+  border: 1px solid #cbd5e1;
+}
+
+.misc-item-name strong {
+  color: #000000;
+}
+
+.misc-settle-text {
+  font-weight: 600;
+  color: #475569;
+}
+
+.misc-room-text {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Rule 3: Highlighting Values / Figures / Numbers in BLACK */
+.misc-amount-text {
+  font-weight: 800;
+  font-size: 14px;
+  color: #000000;
+}
+
+.misc-action-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.misc-action-btn:hover {
+  background: #f8fafc;
+  color: #000000;
+}
+
+.misc-empty-state {
+  text-align: center;
+  padding: 36px !important;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Modal */
+.misc-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.misc-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.misc-modal-header {
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-bottom: 1.5px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.misc-modal-header h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.misc-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.misc-modal-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.misc-modal-type-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.toggle-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 800;
+  color: #64748b;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.misc-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.misc-form-group label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.misc-form-group input,
+.misc-form-group select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13.5px;
+  outline: none;
+  color: #000000;
+  background: #ffffff;
+}
+
+.misc-form-group input:focus,
+.misc-form-group select:focus {
+  border-color: #000000;
+}
+
+.misc-warn-text {
+  font-size: 12px;
+  color: #d97706;
+  margin: 0;
+}
+
+.misc-modal-footer {
+  padding: 14px 24px;
+  background: #f8fafc;
+  border-top: 1.5px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

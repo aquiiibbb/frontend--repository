@@ -1,0 +1,273 @@
+/* White & Light Grey Confirmation & Execution Modal CSS */
+
+@keyframes pmsPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.pms-confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pms-confirm-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  animation: pmsPopIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.pms-confirm-header {
+  background: #f8fafc;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pms-confirm-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pms-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+}
+
+.pms-icon-badge.badge-danger {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.pms-icon-badge.badge-warning {
+  background: #fffbebfb;
+  border-color: #fde68a;
+}
+
+.pms-icon-badge.badge-info {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+.pms-icon-primary { color: #0f172a; }
+.pms-icon-danger { color: #dc2626; }
+.pms-icon-warning { color: #d97706; }
+.pms-icon-info { color: #0284c7; }
+
+.pms-confirm-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.pms-close-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pms-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.pms-confirm-body {
+  padding: 24px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pms-confirm-message {
+  margin: 0 0 12px 0;
+  color: #334155;
+  font-weight: 500;
+}
+
+.pms-details-card {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pms-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.pms-detail-label {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.pms-detail-value {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.pms-confirm-footer {
+  padding: 16px 24px;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.pms-confirm-footer.justify-center {
+  justify-content: center;
+}
+
+.pms-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pms-btn-secondary {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+}
+
+.pms-btn-secondary:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.pms-btn-light-grey {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.pms-btn-light-grey:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.pms-btn-primary {
+  background: #0f172a;
+  border: 1px solid #0f172a;
+  color: #ffffff;
+}
+
+.pms-btn-primary:hover {
+  background: #1e293b;
+}
+
+.pms-btn-danger {
+  background: #dc2626;
+  border: 1px solid #dc2626;
+  color: #ffffff;
+}
+
+.pms-btn-danger:hover {
+  background: #b91c1c;
+}
+
+.pms-btn-warning {
+  background: #d97706;
+  border: 1px solid #d97706;
+  color: #ffffff;
+}
+
+.pms-btn-warning:hover {
+  background: #b45309;
+}
+
+/* Execution State Styling */
+.pms-execution-card {
+  text-align: center;
+  padding: 32px 24px 24px 24px;
+}
+
+.pms-execution-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.pms-execution-icon {
+  color: #16a34a;
+}
+
+.pms-execution-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.pms-execution-message {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}

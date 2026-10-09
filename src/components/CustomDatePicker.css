@@ -1,0 +1,13 @@
+.custom-datepicker-wrapper {
+  box-sizing: border-box;
+}
+
+.custom-datepicker-trigger:hover {
+  border-color: #0284c7 !important;
+}
+
+.custom-datepicker-trigger:focus {
+  outline: none;
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}

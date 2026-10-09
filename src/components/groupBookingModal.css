@@ -1,0 +1,424 @@
+.gbm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: gbmFade 0.25s ease-out;
+}
+
+@keyframes gbmFade {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.gbm-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 820px;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.25);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.gbm-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+}
+
+.gbm-header-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gbm-header-icon {
+  font-size: 32px;
+  width: 46px;
+  height: 46px;
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gbm-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.gbm-header p {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.gbm-close {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.gbm-close:hover { background: #e2e8f0; color: #0f172a; }
+
+/* STEPS BAR */
+.gbm-steps-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.gbm-step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.gbm-step-item.active {
+  opacity: 1;
+}
+
+.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gbm-step-item.active .step-num {
+  background: #d3d3d3;
+  color: #0f172a;
+}
+
+.step-txt {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.gbm-step-line {
+  flex: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 12px;
+}
+
+/* BODY */
+.gbm-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.gbm-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.gbm-form-row.two-col > .gbm-field {
+  flex: 1;
+}
+
+.gbm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gbm-field.full { width: 100%; }
+
+.gbm-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.gbm-field input,
+.gbm-field select {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.gbm-field input:focus,
+.gbm-field select:focus {
+  border-color: #0f172a;
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+}
+
+/* DATES & MATRIX */
+.gbm-dates-strip {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  background: #f8fafc;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.gbm-nights-badge {
+  padding: 8px 16px;
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-bottom: 4px;
+}
+
+.gbm-selection-summary {
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gbm-selected-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.gbm-pill {
+  padding: 2px 10px;
+  background: #d3d3d3;
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+.gbm-room-matrix-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gbm-category-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.gbm-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.gbm-room-card {
+  padding: 12px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gbm-room-card:hover:not(:disabled) {
+  border-color: #0f172a;
+  transform: translateY(-2px);
+}
+
+.gbm-room-card.selected {
+  background: #d3d3d3;
+  border-color: #b0b0b0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.gbm-room-card.booked {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gbm-room-no {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.gbm-room-status {
+  font-size: 10.5px;
+  font-weight: 600;
+  margin-top: 4px;
+  color: #64748b;
+}
+
+.gbm-room-card.selected .gbm-room-status {
+  color: #0f172a;
+}
+
+/* ALLOCATION TABLE */
+.gbm-allocation-table-wrap {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gbm-allocation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.gbm-allocation-table th {
+  background: #f8fafc;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.gbm-allocation-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.gbm-allocation-table input,
+.gbm-allocation-table select {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 12.5px;
+  width: 100%;
+}
+
+/* BILLING CARDS */
+.gbm-billing-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.gbm-billing-tile {
+  padding: 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  display: flex;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.gbm-billing-tile:hover {
+  border-color: #0f172a;
+}
+
+.gbm-billing-tile.selected {
+  background: #f8fafc;
+  border-color: #0f172a;
+}
+
+.gbm-b-icon {
+  font-size: 26px;
+}
+
+.gbm-billing-tile strong {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.gbm-billing-tile p {
+  margin: 4px 0 0;
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+/* SUMMARY BOX */
+.gbm-summary-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gbm-summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #475569;
+}
+
+.gbm-summary-line.grand {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+}
+
+.gbm-summary-line.due {
+  font-size: 15px;
+  font-weight: 800;
+  color: #dc2626;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+}
+
+.txt-success { color: #10b981; font-weight: 700; }
+
+/* FOOTER */
+.gbm-footer {
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

@@ -1,0 +1,709 @@
+/* ==========================================================================
+   DIRECT HOTEL WEB BOOKING ENGINE (IBE) — LUXURY GUEST PORTAL STYLES
+   ========================================================================== */
+
+:root {
+  --ibe-primary: #0f172a;
+  --ibe-accent: #0284c7;
+  --ibe-accent-hover: #0369a1;
+  --ibe-gold: #d97706;
+  --ibe-bg: #f8fafc;
+  --ibe-card-bg: #ffffff;
+  --ibe-text: #0f172a;
+  --ibe-muted: #64748b;
+  --ibe-border: #e2e8f0;
+  --ibe-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+}
+
+.ibe-container {
+  min-height: 100vh;
+  background-color: var(--ibe-bg);
+  color: var(--ibe-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding-bottom: 80px;
+}
+
+/* ---------- Top Luxury Header Bar ---------- */
+.ibe-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ibe-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.ibe-logo-icon {
+  font-size: 24px;
+}
+
+.ibe-hotel-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #ffffff, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ibe-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ibe-contact-link {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ibe-contact-link:hover {
+  color: #38bdf8;
+}
+
+.ibe-pms-back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ibe-pms-back-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  border-color: #38bdf8;
+}
+
+/* ---------- Multi-Step Progress Tracker ---------- */
+.ibe-stepper-wrap {
+  background: #ffffff;
+  border-bottom: 1px solid var(--ibe-border);
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.ibe-stepper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ibe-step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ibe-muted);
+}
+.ibe-step-item.active {
+  color: var(--ibe-accent);
+}
+.ibe-step-item.completed {
+  color: #10b981;
+}
+
+.ibe-step-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+.ibe-step-item.active .ibe-step-number {
+  background: var(--ibe-accent);
+  color: #ffffff;
+}
+.ibe-step-item.completed .ibe-step-number {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.ibe-step-divider {
+  flex: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 16px;
+}
+.ibe-step-divider.active {
+  background: var(--ibe-accent);
+}
+
+/* ---------- Main Body Container ---------- */
+.ibe-main-content {
+  max-width: 1140px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* ---------- Step 1: Search Bar Widget ---------- */
+.ibe-search-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: var(--ibe-shadow);
+  border: 1px solid var(--ibe-border);
+  margin-bottom: 32px;
+}
+
+.ibe-search-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.4fr 1fr 1fr auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.ibe-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ibe-field-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ibe-muted);
+}
+
+.ibe-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  line-height: 48px;
+  border-radius: 10px;
+  border: 1.5px solid var(--ibe-border);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ibe-text);
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+select.ibe-input {
+  height: 48px !important;
+  line-height: 48px !important;
+  padding: 0 32px 0 14px !important;
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  background-color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  cursor: pointer;
+}
+input[type="date"].ibe-input {
+  height: 48px !important;
+  line-height: 48px !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+  cursor: pointer;
+}
+input[type="date"].ibe-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 4px;
+  filter: invert(0.2) sepia(1) saturate(5) hue-rotate(185deg);
+}
+
+.ibe-input:focus {
+  border-color: var(--ibe-accent);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* ---------- Custom Luxury Date Picker Dropdown ---------- */
+.ibe-custom-datepicker-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.ibe-custom-date-trigger {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1.5px solid var(--ibe-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+.ibe-custom-date-trigger:hover {
+  border-color: var(--ibe-accent);
+  background: #f8fafc;
+}
+.ibe-date-icon {
+  font-size: 15px;
+}
+.ibe-date-text {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ibe-date-arrow {
+  font-size: 9px;
+  color: #64748b;
+}
+
+.ibe-datepicker-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 100;
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
+  overflow: hidden;
+  animation: ibeDpIn 0.18s ease both;
+}
+@keyframes ibeDpIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.ibe-dp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+}
+.ibe-dp-month-title {
+  font-weight: 800;
+  font-size: 14px;
+  color: #f8fafc;
+}
+.ibe-dp-nav-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.ibe-dp-nav-btn:hover {
+  background: #0284c7;
+  border-color: #0284c7;
+}
+
+.ibe-dp-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 8px 8px 4px;
+  background: #f8fafc;
+  border-bottom: 1px solid #f1f5f9;
+}
+.ibe-dp-weekdays span {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.ibe-dp-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  padding: 8px;
+  background: #ffffff;
+}
+.ibe-dp-day-cell {
+  aspect-ratio: 1 / 1;
+  border: 1px solid transparent;
+  background: #f8fafc;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s ease;
+}
+.ibe-dp-day-cell:hover:not(.disabled) {
+  background: #e0f2fe;
+  color: #0284c7;
+  border-color: #38bdf8;
+  transform: scale(1.05);
+}
+.ibe-dp-day-cell.outside {
+  color: #cbd5e1;
+  background: transparent;
+  opacity: 0.4;
+}
+.ibe-dp-day-cell.today {
+  color: #d97706;
+  background: #fef3c7;
+  font-weight: 900;
+  border-color: #f59e0b;
+}
+.ibe-dp-day-cell.selected {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  font-weight: 900;
+  border-color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+.ibe-dp-day-cell.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+
+.ibe-dp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+.ibe-dp-today-btn, .ibe-dp-close-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 11.5px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+.ibe-dp-today-btn:hover, .ibe-dp-close-btn:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+.ibe-btn-primary {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+.ibe-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+}
+
+/* ---------- Step 2: Room Category Cards Grid ---------- */
+.ibe-section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ibe-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ibe-room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ibe-room-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--ibe-border);
+  box-shadow: var(--ibe-shadow);
+  display: grid;
+  grid-template-columns: 320px 1fr 240px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ibe-room-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.12);
+}
+
+.ibe-room-img-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+  background: #0f172a;
+}
+.ibe-room-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ibe-badge-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.ibe-room-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ibe-room-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ibe-primary);
+  margin-bottom: 6px;
+}
+
+.ibe-room-specs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  color: var(--ibe-muted);
+  margin-bottom: 14px;
+}
+
+.ibe-amenity-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ibe-amenity-chip {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.ibe-room-pricing-action {
+  background: #f8fafc;
+  border-left: 1px solid var(--ibe-border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.ibe-price-amount {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--ibe-primary);
+}
+.ibe-price-unit {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ibe-muted);
+}
+
+.ibe-select-room-btn {
+  width: 100%;
+  padding: 12px 18px;
+  background: var(--ibe-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.ibe-select-room-btn:hover {
+  background: var(--ibe-accent-hover);
+}
+
+/* ---------- Step 3: Checkout & Guest Form Grid ---------- */
+.ibe-checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+}
+
+.ibe-form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--ibe-border);
+  padding: 28px;
+  box-shadow: var(--ibe-shadow);
+  margin-bottom: 24px;
+}
+
+.ibe-form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ibe-addons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ibe-addon-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1.5px solid var(--ibe-border);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.ibe-addon-item.selected {
+  border-color: var(--ibe-accent);
+  background: #f0f9ff;
+}
+
+.ibe-summary-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--ibe-border);
+  padding: 24px;
+  box-shadow: var(--ibe-shadow);
+  position: sticky;
+  top: 90px;
+}
+
+.ibe-summary-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+.ibe-summary-line.total {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--ibe-primary);
+  border-top: 2px dashed #cbd5e1;
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+/* ---------- Step 4: Confirmation Screen ---------- */
+.ibe-confirmation-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 48px 32px;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  box-shadow: var(--ibe-shadow);
+  border: 1px solid var(--ibe-border);
+}
+
+.ibe-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #d1fae5;
+  color: #059669;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.ibe-booking-ref-box {
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 20px 0;
+}
+.ibe-ref-code {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--ibe-accent);
+}
+
+@media (max-width: 900px) {
+  .ibe-search-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ibe-room-card {
+    grid-template-columns: 1fr;
+  }
+  .ibe-checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
