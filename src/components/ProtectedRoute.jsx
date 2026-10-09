@@ -5,7 +5,10 @@ import { Navigate, Outlet } from "react-router-dom";
 export default function ProtectedRoute() {
   let isAuth = false;
   try {
-    isAuth = dataStore.getItem("pms_authenticated") === "true" && Boolean(dataStore.getItem("pms_token"));
+    const auth = dataStore.getItem("pms_authenticated") === "true";
+    const token = Boolean(dataStore.getItem("pms_token"));
+    const tenantId = dataStore.getItem("pms_tenant_id");
+    isAuth = auth && token && Boolean(tenantId) && tenantId !== "default";
   } catch (e) {
     isAuth = false;
   }
