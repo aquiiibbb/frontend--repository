@@ -378,12 +378,11 @@ export async function initBackendSync() {
       return { mode: "backend" };
     } catch (err) {
       console.error("[sync] could not load hotel data:", err.message);
-      if (err.status === 401) {
-        handleSessionExpired();
-        return { mode: "logged-out" };
+      clearSession();
+      if (!isPublicPage() && !window.location.pathname.startsWith("/login") && !window.location.pathname.startsWith("/impersonate")) {
+        window.location.replace("/login");
       }
-      window.__PMS_BACKEND_ERROR__ = err.message;
-      throw err; // main.jsx shows a "cannot reach server" screen with a Retry button
+      return { mode: "logged-out" };
     }
   }
 

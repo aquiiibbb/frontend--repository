@@ -134,6 +134,7 @@ export const rawClearMemory = () => memory.clear();
 export const syncableKeysInMemory = () => [...memory.keys()].filter(isSyncableKey);
 export const clearSession = () => {
   [...SESSION_KEYS].forEach((k) => sessionRemove(k));
+  memory.clear();
 };
 
 export default dataStore;
